@@ -140,7 +140,7 @@ MonoBehaviour:
   jumpForce: 7
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!1 &778733874
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +309,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 611392012}
   m_SourcePrefab: {fileID: 100100000, guid: 1b8c20020b6d59d0bad4c49f9fbc9d11, type: 3}
---- !u!1001 &8953705453582132997
+--- !u!1001 &6356091665003921886
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -371,5 +371,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 778733877}
-  - {fileID: 8953705453582132997}
+  - {fileID: 6356091665003921886}
   - {fileID: 2871954585726535554}

@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Horizontal Movement using new Input System
+        // Horizontal Movement using WASD or Arrow Keys
         float horizontalInput = 0f;
         if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
             horizontalInput = -1f;
@@ -33,8 +33,13 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded())
             hasJumped = false;
 
-        // Jumping using new Input System
-        if (Keyboard.current.spaceKey.wasPressedThisFrame && IsGrounded() && !hasJumped)
+        // Jumping using W, Up Arrow, or Spacebar
+        bool jumpPressed = 
+            (Keyboard.current.spaceKey.wasPressedThisFrame ||
+             Keyboard.current.wKey.wasPressedThisFrame ||
+             Keyboard.current.upArrowKey.wasPressedThisFrame);
+
+        if (jumpPressed && IsGrounded() && !hasJumped)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             hasJumped = true;
