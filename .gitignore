@@ -5,6 +5,7 @@
 # OS-specific files
 .DS_Store
 Thumbs.db
+.vscode/
 
 # Unity cache and temporary files
 [Ll]ibrary/
